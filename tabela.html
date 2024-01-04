@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela e Formularios</title>
+    <script src="https://kit.fontawesome.com/21b8d1c41c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Excluir usuário-->
+    <div class="modal fade" id="modal-excluir">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Excluir Usuário</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Realmente deseja excluir o usuário?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-danger" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i> Excluir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Excluir usuário fim-->
+
+
+    <!--Novo usuário-->
+    <div class="modal fade" id="modal-novo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Novo Usuário</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="nome" class="form-label">Nome</label>
+                                <div class="input-group">
+                                  <input type="text" id="nome" class="form-control">
+                                  <span class="input-group-text"><i class="fa-solid fa-user"></i></span>  
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <div class="input-group">
+                                    <input type="text" id="telefone" class="form-control">
+                                    <span class="input-group-text"><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-sm btn-success" data-bs-dismiss="modal"><i class="fa-solid fa-check"></i>  Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Novo usuário fim-->
+
+   <div class="container py-5">
+        <div class="mb-3">
+            <div class="btn-group">
+                <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modal-novo"><i class="fa-solid fa-plus"></i> Novo</button>
+            </div>
+        </div>
+        <div class="border p-3 rounded shadow">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="col-6">Nome</th>
+                        <th class="col-5">Telefone</th>
+                        <th class="col-1 text-center">Opção</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jose Ferreira</td>
+                        <td>(86) 90000-0000</td>
+                        <td class="text-center"><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-excluir"><i class="fa-solid fa-xmark"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Francisca Maria</td>
+                        <td>(86) 91111-1111</td>
+                        <td class="text-center"><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-excluir"><i class="fa-solid fa-xmark"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>Rosa Ferreira</td>
+                        <td>(86) 92222-2222</td>
+                        <td class="text-center"><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-excluir"><i class="fa-solid fa-xmark"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>arla Ferreira</td>
+                        <td>(86) 93333-3333</td>
+                        <td class="text-center"><button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#modal-excluir"><i class="fa-solid fa-xmark"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   </div> 
+</body>
+</html>
